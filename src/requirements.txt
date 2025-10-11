@@ -1,0 +1,8 @@
+crewai==0.201.1
+crewai-tools==0.75.0
+pydantic-settings==2.10.1
+fastapi==0.116.2
+uvicorn[standard]==0.35.0
+langchain-community==0.3.31
+tavily-python==0.7.12
+
