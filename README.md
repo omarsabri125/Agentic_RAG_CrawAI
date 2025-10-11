@@ -126,7 +126,7 @@ Agentic_RAG_CrawAI/
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/omarsabri125/Agentic_RAG_CrawAI.git
-   cd Multimodel_Movies_Search
+   cd Agentic_RAG_CrawAI
    ```
 
 2. **Create and activate virtual environment**:
