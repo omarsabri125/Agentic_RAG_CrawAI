@@ -10,27 +10,27 @@ The workflow is structured into **five coordinated agents**, each responsible fo
 ---
 
 ## 🧩 System Architecture
+```
 
 │ 1️⃣ Router Agent │ → Decides whether to search the web or use local data
 └─────────┬────────────┘
-│
+           │
 ┌─────────▼────────────┐
 │ 2️⃣ Retriever Agent │ → Retrieves information using Tavily or PDFSearch
 └─────────┬────────────┘
-│
+           │
 ┌─────────▼────────────┐
 │ 3️⃣ Grader Agent │ → Evaluates semantic relevance of retrieved content
 └─────────┬────────────┘
-│
+           │
 ┌─────────▼────────────┐
-│ 4️⃣ Hallucination │ → Checks factual grounding ("yes" / "no")
-│ Grader Agent │
+│ 4️⃣ Hallucination Grader │ → Checks factual grounding ("yes" / "no")
 └─────────┬────────────┘
-│
+           │
 ┌─────────▼────────────┐
 │ 5️⃣ Answer Agent │ → Produces final concise answer or triggers web search
 └──────────────────────┘
-
+```
 
 ---
 
@@ -38,10 +38,10 @@ The workflow is structured into **five coordinated agents**, each responsible fo
 
 | Component     | Description |
 |---------------|-------------|
-| `agents.py`   | Defines and initializes all agents (Router, Retriever, Grader, Hallucination, Answer). |
-| `tasks.py`    | Defines structured **Pydantic-based tasks** for each agent. Each task specifies input/output schema and logic. |
-| `tools.py`    | Provides the tools used by the agents — including `PDFSearchTool` and `TavilySearch`. |
-| `main.py`     | Orchestrates the workflow: initializes tools, agents, tasks, and executes them sequentially using the CrewAI process. |
+| `agents`   | Defines and initializes all agents (Router, Retriever, Grader, Hallucination, Answer). |
+| `tasks`    | Defines structured **Pydantic-based tasks** for each agent. Each task specifies input/output schema and logic. |
+| `tools`    | Provides the tools used by the agents — including `PDFSearchTool` and `TavilySearch`. |
+| `workflow.py`     | Orchestrates the workflow: initializes tools, agents, tasks, and executes them sequentially using the CrewAI process. |
 
 ---
 
