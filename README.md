@@ -1,5 +1,9 @@
 # 🧠 Intelligent RAG Crew — Multi-Agent Information Retrieval System
 
+<p float="left">
+  <img src="assets/CrawAI.png" width="600" />
+</p>
+
 ## 📄 Overview
 
 This project implements a **multi-agent RAG (Retrieval-Augmented Generation) pipeline** using **CrewAI**.  
